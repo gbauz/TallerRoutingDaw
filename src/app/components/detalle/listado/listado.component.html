@@ -1,0 +1,15 @@
+<h1 class="contenedorformulario__titulo">Lista de servicios que ofrecemos:</h1>
+<div class="contenedorformulario">
+    <mat-selection-list #shoes [multiple]="false">
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+          {{shoe}}
+        </mat-list-option>
+      </mat-selection-list>
+      
+      <p>
+        Opción Seleccionada: {{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : 'None'}}
+      </p>
+      <div class="faqBoton">
+        <button mat-raised-button color="accent" [routerLink]="'/home'" class="botonfaq">Regresar</button>
+    </div>
+</div>

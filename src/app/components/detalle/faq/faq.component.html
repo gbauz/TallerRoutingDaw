@@ -1,0 +1,33 @@
+<h1 style="text-align: center; padding: 30px;">Preguntas Frecuentes FAQ</h1>
+
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            ¿Cuál es el horario de atención?        
+        </mat-panel-title>
+        <mat-panel-description>
+          Ver descripción
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Nuestro horario de atención es de lunes a viernes de 9:00 AM a 6:00 PM.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            ¿Dónde estamos ubicados?
+        </mat-panel-title>
+        <mat-panel-description>
+          Ver descripción{{panelOpenState ? 'Cerrar' : 'Abrir'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Estmos Ubicados en la Avenida Machala Guayaquil-Ecuador</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+<div class="faqBoton">
+    <button mat-raised-button color="accent" [routerLink]="'/home'" class="botonfaq">Regresar</button>
+</div>
+  
+  

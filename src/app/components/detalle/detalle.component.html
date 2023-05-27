@@ -1,0 +1,28 @@
+<div class="contenedorformulario">
+  <h1 class="contenedorformulario__titulo">Llene el siguiente formulario:</h1>
+  <mat-form-field>
+    <mat-label>Ingrese su nombre</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Ingrese su cedula</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Ingrese su país</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ingrese fecha de inicio y fin de servicio</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="mostrarMensajeEmergente()">Registrar</button>
+</div>
